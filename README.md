@@ -13,12 +13,12 @@ In this section, we'll discuss 2 foundational probability distributions that are
 
 You will be able to:
 
-- understand that the bernoulli experiment is one of the basic distributions.
-- understand how a bernoulli experiment can describe a coin flip, and that it can be extended to other applications.
-- learn what it means when events are independent
-- learn that the binomial distribution models a sequence of independent bernoulli events
-- understand how to use numpy to randomly generate binomial and bernoulli trials
-- use matplotlib to show the output of generated binomial and bernoulli trials.
+- Understand that the Bernoulli experiment is one of the basic distributions
+- Understand how a Bernoulli experiment can describe a coin flip, and that it can be extended to other applications
+- Learn what it means when events are independent
+- Learn that the binomial distribution models a sequence of independent Bernoulli events
+- Understand how to use NumPy to randomly generate Binomial and Bernoulli trials
+- Use Matplotlib to show the output of generated Binomial and Bernoulli trials
 
 
 ## The Bernoulli or Binary distribution
