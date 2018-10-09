@@ -87,13 +87,6 @@ np.random.seed(123) # set a seed to get the same results
 np.random.binomial(100, 0.8)
 ```
 
-
-
-
-    78
-
-
-
 Now, let's try this again:
 
 
@@ -101,26 +94,12 @@ Now, let's try this again:
 np.random.binomial(100, 0.8)
 ```
 
-
-
-
-    82
-
-
-
 And again:
 
 
 ```python
 np.random.binomial(100, 0.8)
 ```
-
-
-
-
-    83
-
-
 
 You can see how this number changes slightly every time and fluctuates around 100. If you'd repeat this many times, you could expect that the amount of successes will converge to 80. Let's illustrate with the for loop below which repeats this 500 times:
 
@@ -136,13 +115,6 @@ for loop in range(500):
 ```python
 sum(np_it)/500
 ```
-
-
-
-
-    80.194
-
-
 
 Now we'll use `np.random.binomial` to illustrate out findings regarding penalties above. Let's keep track of how many times we observe 0 goals, 1 goal, 2 goals, and 3 goals and find the probabilities through simulation. Now, lets repeat our experiment 10000 times.
 
@@ -164,10 +136,6 @@ print(values)
 print(counts)
 ```
 
-    [0 1 2 3]
-    [  83  979 3786 5152]
-
-
 ## Visualize these results
 
 Now, let's use these results and visualize them in terms of fractions. You'll see that these fractions approximations of the values as calculated in the Binomial distribution formula. 
@@ -180,10 +148,6 @@ plt.xticks(values)
 plt.ylabel('Fraction')
 plt.title('Number of penalty goals');
 ```
-
-
-![png](index_files/index_26_0.png)
-
 
 ## Summary
 
