@@ -4,7 +4,7 @@
 ## Introduction
 
 Now that you learned about PMFs, PDFs, and CDFs, let's dive into the world of distributions! In this 
-In this section, you'll learn about 2 foundational probability distributions that are extremely useful and have an endless amount of applications: the Bernoulli distribution the Binomial distribution. You'll notice that these distributions formalize a lot of the theory you learned in the probability theory section! 
+In this section, you'll learn about 2 foundational probability distributions that are extremely useful and have an endless amount of applications: the Bernoulli distribution and the Binomial distribution. You'll notice that these distributions formalize a lot of the theory you learned in the probability theory section! 
 
 
 ## Objectives
