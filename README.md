@@ -3,7 +3,7 @@
 
 ## Introduction
 
-Now that you learned about PMFs, PDFs, and CDFs, let's dive into the world of distributions! In this 
+Now that you learned about PMFs, PDFs, and CDFs, let's dive into the world of distributions! 
 In this section, you'll learn about 2 foundational probability distributions that are extremely useful and have an endless amount of applications: the Bernoulli distribution and the Binomial distribution. You'll notice that these distributions formalize a lot of the theory you learned in the probability theory section! 
 
 
@@ -26,7 +26,7 @@ In the previous sections, we discussed several probability theory situations reg
 The Bernoulli experiment is a simple experiment in which there is a binary
 outcome: 0-1, success-failure, head-tail, etc. 
 
-As the Bernoulli experiment has two potential outcomes: 0 or 1, and if we would model a coin flip, we could say that 0 means heads, and 1 tails. With a fair coin, obtaining either value when performing a coin toss would have an assigned probability of 0.5. The Bernoulli experiment can also describe events with different probability structures. For example, let's say that the chance of scoring a penalty goal is 80%. Where $Y$ is the penalty outcome:
+If we were to model a coin flip with a Bernoulli distribution, we could say that 0 means heads, and 1 tails. With a fair coin, obtaining either value when performing a coin toss would have an assigned probability of 0.5. The Bernoulli experiment can also describe events with different probability structures. For example, let's say that the chance of scoring a penalty goal is 80%. Where $Y$ is the penalty outcome:
 
 $Y = Bernoulli(p)$ and $p=P(Y=1)=0.8$.
 
@@ -76,7 +76,7 @@ Getting to $P(Y=1)$ is a little bit more complicated. It's essentially $0.8*0.2*
 $$ P(Y=k)= \binom{n}{k} p^k(1-p)^{(n-k)}$$ 
 
 
-Where $k$ denites the number of successes. Applying this on $P(Y=2)$ we get $ P(Y=2)= \binom{3}{2} 0.8^2(1-0.8)^{(3-2)} = \dfrac{3!}{2!1!}*0.8^2 * 0.2^1 = 3*0.8^2*0.2$. Repeating this for the other discrete values between 0 and 3, you get:
+Where $k$ denotes the number of successes. Applying this on $P(Y=2)$ we get $$ P(Y=2)= \binom{3}{2} 0.8^2(1-0.8)^{(3-2)} = \dfrac{3!}{2!1!}*0.8^2 * 0.2^1 = 3*0.8^2*0.2$$ Repeating this for the other discrete values between 0 and 3, you get:
 
 - $P(Y=0)=0.008$
 - $P(Y=1)=0.096 $ 
@@ -104,7 +104,7 @@ Very similarly to Bernoulli, a general rule for the Binomial distribution is tha
 In the first part, you learned about Bernoulli and Binomial using their formulas to obtain the probability distributions.
 You can also perform random sampling. What you're basically doing then is selecting a sample from a statistical population in a way that every possible sample has a predetermined probability of being selected.
 
-Applied to our example, imagine that 1 represents scoring a penalty and 0 represents missing. If $p = 0.8$, if you'll do 100 penalties in a row, you'd expect to have about 80 hits. The reason why it's not exactly 80 is because uncertainty plays a role, and this is exactly what you can model using the NumPy random library! Below, we're using `np.random.binomial` to generate how many successful penalties we have when shooting 100 penalties.
+Applied to our example, imagine that 1 represents scoring a penalty goal and 0 represents missing. If $p = 0.8$, if you take 100 penalty shots in a row, you'd expect to score about 80 goals. The reason why it's not exactly 80 is because uncertainty plays a role, and this is exactly what you can model using the NumPy random library! Below, we're using `np.random.binomial` to generate how many successful penalties we have when shooting 100 penalties.
 
 
 ```python
@@ -196,7 +196,7 @@ print(counts)
 
 ## Visualize these results
 
-Now, let's use these results and visualize them in terms of fractions. You'll see that these fractions approximations of the values as calculated in the Binomial distribution formula. 
+Now, let's use these results and visualize them in terms of fractions. You'll see that these fractions are approximations of the values as calculated in the Binomial distribution formula. 
 
 
 ```python
