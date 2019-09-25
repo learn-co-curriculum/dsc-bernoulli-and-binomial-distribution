@@ -12,7 +12,7 @@ In this section, you'll learn about 2 foundational probability distributions tha
 You will be able to:
 
 - Understand that the Bernoulli experiment is one of the basic distributions
-- Understand how a Bernoulli experiment can describe a coin flip, and that it can be extended to other applications
+- Understand how a Bernoulli experiment can describe a coin flip and that it can be extended to other applications
 - Learn what it means when events are independent
 - Learn that the binomial distribution models a sequence of independent Bernoulli events
 - Understand how to use NumPy to randomly generate Binomial and Bernoulli trials
@@ -21,10 +21,10 @@ You will be able to:
 
 ## The Bernoulli or Binary distribution
 
-In the previous sections, we discussed several probability theory situations regarding throwing a dice or throwing a coin. The Bernoulli distribution is a discrete distribution that formalizes the idea of a coin flip. 
+In the previous sections, we discussed several probability theory situations regarding throwing a dice or flipping a coin. The Bernoulli distribution is a discrete distribution that formalizes the idea of a coin flip. 
 
 The Bernoulli experiment is a simple experiment in which there is a binary
-outcome: 0-1, success-failure, head-tail, etc. 
+outcome: 0-1, success-failure, heads-tails, etc. 
 
 If we were to model a coin flip with a Bernoulli distribution, we could say that 0 means heads, and 1 tails. With a fair coin, obtaining either value when performing a coin toss would have an assigned probability of 0.5. The Bernoulli experiment can also describe events with different probability structures. For example, let's say that the chance of scoring a penalty goal is 80%. Where $Y$ is the penalty outcome:
 
@@ -47,7 +47,7 @@ $ E((X-\mu)^2) = \sigma^2 = \sum_i p(x_i)(x_i-\mu)^2 = 0.2*(-0.8)^2+0.8*(0.2)^2 
 
 A general rule for the Bernoulli distribution is that: $E(X)=p$ and $\sigma^2=p*(1-p)$.
 
-Note how the Bernoulli distribution describes a single coin flip, a single penalty shot, etc. What if we repeat this process multiple times and are interested in the probability to obtain a certain number of 1s/successes/tails? This process is described by the **binomial distribution**.
+Note how the Bernoulli distribution describes a single coin flip, a single penalty shot, etc. What if we repeat this process multiple times and are interested in the probability of obtaining a certain number of 1s/successes/tails? This process is described by the **binomial distribution**.
 
 ## The Binomial distribution
 
@@ -55,7 +55,7 @@ The binomial distribution describes the process of performing $n$ *independent* 
 
 When we say that events are **independent, this means that an event is not affected by previous events**.
 
-Applying this to our penalty goal example, this means that the assumption is that, when a soccer player misses a penalty and then tries again, the fact that he missed it the previous time does not affect his chances of hitting it now: the probability is still 80% ($p=0.8$)!
+Applying this to our penalty goal example, this means that the assumption is that, when a soccer player misses a penalty and then tries again, the fact that he missed it the previous time does not affect his chances of making it now: the probability is still 80% ($p=0.8$)!
 
 
 As we have a repeated Bernoulli experiment, the binomial distribution has two parameters: $p$ (the success probability) and $n$ (the number of times the experiment is repeated). We say that random variable $Y$ follows a Binomial distribution:
@@ -148,7 +148,7 @@ np.random.binomial(100, 0.8)
 
 
 
-You can see how this number changes slightly every time and fluctuates around 100. If you'd repeat this many times, and then divide the final result by the number of times you've repeated this, you could expect that the amount of successes will converge to 80. The for loop below does this 500 times. 
+You can see how this number changes slightly every time and fluctuates around 80. If you'd repeat this many times, and then divide the final result by the number of times you've repeated this, you could expect that the amount of successes will converge to 80. The for loop below does this 500 times. 
 
 
 ```python
@@ -170,7 +170,7 @@ sum(np_it)/500
 
 
 
-Now we'll use `np.random.binomial` to illustrate out findings regarding penalties above. Let's keep track of how many times we observe 0 goals, 1 goal, 2 goals, and 3 goals and find the probabilities through simulation. Now, lets repeat our experiment 10000 times.
+Now we'll use `np.random.binomial` to illustrate our findings regarding penalties above. Let's keep track of how many times we observe 0 goals, 1 goal, 2 goals, and 3 goals and find the probabilities through simulation. Now, let's repeat our experiment 10000 times.
 
 
 ```python
@@ -181,7 +181,7 @@ for loop in range(n):
     np_it = np.array(iteration)
 ```
 
-np_it stores the total penalty goal outcomes (0 to 3) for each of the 10000 iterations. Now using `np.unique()` with the optional argument `return_counts`, you get the levels of the $k$ as in your Binomial formula along with how often they occurred when running 10000 trials.
+`np_it` stores the total penalty goal outcomes (0 to 3) for each of the 10000 iterations. Now using `np.unique()` with the optional argument `return_counts`, you get the levels of the $k$ as in your Binomial formula along with how often they occurred when running 10000 trials.
 
 
 ```python
@@ -230,4 +230,4 @@ This seems pretty close to our theoretical result! Try using many more trials (5
 
 ## Summary
 
-In this lecture you learned about the Bernoulli and Binomial distributions, you learned how to use the formula for the Binomial distribution, and how to simulate Binomial trials to get to approximations of the Binomial distribution probabilities.
+In this lecture, you learned about the Bernoulli and Binomial distributions, you learned how to use the formula for the Binomial distribution, and how to simulate Binomial trials to get to approximations of the Binomial distribution probabilities.
