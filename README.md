@@ -3,20 +3,19 @@
 
 ## Introduction
 
-Now that you learned about PMFs, PDFs, and CDFs, let's dive into the world of distributions! 
-In this section, you'll learn about 2 foundational probability distributions that are extremely useful and have an endless amount of applications: the Bernoulli distribution and the Binomial distribution. You'll notice that these distributions formalize a lot of the theory you learned in the probability theory section! 
+Now that you learned about probability mass functions, probability density functions, and cumulative density functions (PMFs, PDFs, and CDFs, respectively), let's dive into the world of distributions! 
+
+In this section, you'll learn about two foundational probability distributions that are extremely useful and have an endless amount of applications: the Bernoulli distribution and the Binomial distribution. You'll notice that these distributions formalize a lot of the theory you learned in the probability theory section! 
 
 
 ## Objectives
 
 You will be able to:
 
-- Understand that the Bernoulli experiment is one of the basic distributions
-- Understand how a Bernoulli experiment can describe a coin flip and that it can be extended to other applications
-- Learn what it means when events are independent
-- Learn that the binomial distribution models a sequence of independent Bernoulli events
-- Understand how to use NumPy to randomly generate Binomial and Bernoulli trials
-- Use Matplotlib to show the output of generated Binomial and Bernoulli trials
+* Describe the components of a Bernoulli distribution
+* Describe how a Binomial Distribution is related to a Bernoulli Distribution
+* Use `numpy` to randomly generate Binomial and Bernoulli trials
+* Use `matplotlib` to show the output of generated Binomial and Bernoulli trials
 
 
 ## The Bernoulli or Binary distribution
